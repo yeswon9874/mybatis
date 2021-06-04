@@ -1,23 +1,33 @@
 package org.tain.controller;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.tain.mappers.UsrMapper;
 
 @RestController
 @RequestMapping("/usr")
-public class UsrController {
+public class UsrRestController {
 
 	@Autowired
 	private UsrMapper usrMapper;
 	
 	@GetMapping("/list")
 	public List<Map<String,Object>> list() {
-		return this.usrMapper.selectAllUsr();
+		return this.usrMapper.selectAll(null);
+	}
+	
+	@GetMapping("/{id}")
+	public Map<String,Object> one(@PathVariable("id") Long id) {
+		Map<String,Object> mapIn = new HashMap<>();
+		mapIn.put("id", id);
+		mapIn.put("imsi", "Hello");
+		return this.usrMapper.selectOne(mapIn);
 	}
 }
