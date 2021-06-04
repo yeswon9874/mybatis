@@ -41,4 +41,12 @@ public class UsrRestController {
 		this.usrMapper.createOne(mapIn);
 		return "success";
 	}
+	
+	@GetMapping("/{id}/delete")
+	public String deleteOne(@PathVariable("id") Long id) {
+		Map<String,Object> mapIn = new HashMap<>();
+		mapIn.put("id", id);
+		this.usrMapper.deleteOne(mapIn);
+		return "success";
+	}
 }

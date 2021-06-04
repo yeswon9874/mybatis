@@ -3,6 +3,7 @@ package org.tain.mappers;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -16,4 +17,9 @@ public interface UsrMapper {
 			+ "values "
 			+ "(#{id}, #{userId}, #{passWd}, #{desc})")
 	void createOne(Map<String,Object> mapIn);
+
+	
+	///////////////////////////////////////////////////////
+	@Delete("delete from tb_usr where id = #{id}") 
+	void deleteOne(Map<String,Object> mapIn);
 }
