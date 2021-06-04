@@ -18,7 +18,7 @@ public class UsrRestController {
 	@Autowired
 	private UsrMapper usrMapper;
 	
-	@GetMapping("/list")
+	@GetMapping(value = {"", "/list"})
 	public List<Map<String,Object>> list() {
 		return this.usrMapper.selectAll(null);
 	}
@@ -29,5 +29,16 @@ public class UsrRestController {
 		mapIn.put("id", id);
 		mapIn.put("imsi", "Hello");
 		return this.usrMapper.selectOne(mapIn);
+	}
+	
+	@GetMapping("/{id}/create")
+	public String createOne(@PathVariable("id") Long id) {
+		Map<String,Object> mapIn = new HashMap<>();
+		mapIn.put("id", id);
+		mapIn.put("userId", "kang");
+		mapIn.put("passWd", "seok");
+		mapIn.put("desc", "Hello Desc");
+		this.usrMapper.createOne(mapIn);
+		return "success";
 	}
 }
