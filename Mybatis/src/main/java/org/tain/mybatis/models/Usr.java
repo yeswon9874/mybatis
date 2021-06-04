@@ -13,5 +13,4 @@ public class Usr {
 	
 	private String desc;
 	
-	private String content;
 }
