@@ -28,6 +28,7 @@ public class UsrRestController {
 		Map<String,Object> mapIn = new HashMap<>();
 		mapIn.put("id", id);
 		mapIn.put("imsi", "Hello");
+		System.out.println("SELECT_ONE");
 		return this.usrMapper.selectOne(mapIn);
 	}
 	
@@ -39,6 +40,16 @@ public class UsrRestController {
 		mapIn.put("passWd", "seok");
 		mapIn.put("desc", "Hello Desc");
 		this.usrMapper.createOne(mapIn);
+		return "success";
+	}
+	
+	@GetMapping("/{id}/update")
+	public String updateOne(@PathVariable("id") Long id) {
+		Map<String,Object> mapIn = new HashMap<>();
+		mapIn.put("id", id);
+		mapIn.put("desc", "hello");
+		this.usrMapper.updateOne(mapIn);
+		System.out.println("UPDATE");
 		return "success";
 	}
 	
