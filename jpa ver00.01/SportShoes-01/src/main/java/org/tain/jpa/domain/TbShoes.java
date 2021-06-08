@@ -2,6 +2,7 @@ package org.tain.jpa.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 import lombok.Data;
 
@@ -12,14 +13,13 @@ public class TbShoes {
 	@Id
 	private Long id;
 	
-	private String code;
+	private String productName;
 	
-	private String model;
+	@Lob
+	private String productContent;
 	
-	private String desc;
+	private String productPrice;
 	
-	private String price;
-	
-	private String color;
+	private String productLocation;
 	
 }
