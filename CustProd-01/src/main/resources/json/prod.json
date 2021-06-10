@@ -1,0 +1,18 @@
+[
+	{
+		"code": "P001",
+		"name": "Apple",
+		"desc": "desc apple",
+		"price": 100
+	},{
+		"code": "P002",
+		"name": "Orange",
+		"desc": "desc orange",
+		"price": 200
+	},{
+		"code": "P003",
+		"name": "Banana",
+		"desc": "desc banana",
+		"price": 400
+	}
+]

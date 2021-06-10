@@ -16,7 +16,7 @@ public class HttpWorking {
 			///////////////////////////////////////////////
 			// 
 			MonJsonNode info = new MonJsonNode("{}");
-			info.put("url", "http://192.168.0.32:8080/v0.1/prod/list");
+			info.put("url", "http://172.20.10.5:8081/v0.1/shoes/list");
 			//info.put("url", "http://localhost:8080/v0.1/rest/board/list2");
 			info.put("method", "GET");
 			
