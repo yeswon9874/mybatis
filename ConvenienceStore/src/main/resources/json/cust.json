@@ -1,0 +1,21 @@
+[
+	{
+		"name": "A",
+		"code": "A001",
+		"phoneNumber": 1111,
+		"gender": "women",
+		"address": "Seoul"
+	},{
+		"name": "B",
+		"code": "B001",
+		"phoneNumber": 1112,
+		"gender": "men",
+		"address": "Jeju"
+	},{
+		"name": "C",
+		"code": "C002",
+		"phoneNumber": 1114,
+		"gender": "women",
+		"address": "Gimpo"
+	}
+]

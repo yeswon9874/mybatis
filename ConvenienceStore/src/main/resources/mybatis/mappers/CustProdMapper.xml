@@ -4,13 +4,12 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="org.tain.mybatis.mappers.CustProdMapper">
-
 	<select id="selectAll" parameterType="CamelMap" resultType="CamelMap">
 		select
 			id
 			, cust_code
 			, prod_code
-			, prod_count
+			, count
 		from
 			tb_cust_prod
 		where 1=1
@@ -18,20 +17,15 @@
 	
 	<select id="selectAllJoin" parameterType="CamelMap" resultType="CamelMap">
 		select
-			a.id             as a_id
-			, a.code         as a_code
-			, a.name         as a_name
-			, a.desc         as a_desc
-			, b.id           as b_id
-			, b.cust_code    as b_cust_code
-			, b.prod_code    as b_prod_code
-			, b.prod_count   as b_prod_count
-			, c.id           as c_id
-			, c.code         as c_code
-			, c.name         as c_name
-			, c.desc         as c_desc
-			, c.price        as c_price
-			, c.price * b.prod_count   as kang
+			<!-- 
+			a.name          as a_name
+			, b.cust_code   as b_cust_code
+			, b.prod_code   as b_prod_code
+			, c.kinds       as c_kinds
+			, c.price * b.count   as total_info
+			 -->
+			a.name          as custname
+			, c.name        as prodname
 		from
 			tb_cust         as a
 			, tb_cust_prod  as b
@@ -40,5 +34,6 @@
 			and b.cust_code = a.code
 			and c.code = b.prod_code
 	</select>
+	
 	
 </mapper>

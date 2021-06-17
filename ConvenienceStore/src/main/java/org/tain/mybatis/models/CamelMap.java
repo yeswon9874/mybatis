@@ -4,8 +4,9 @@ import java.util.HashMap;
 
 import org.springframework.jdbc.support.JdbcUtils;
 
-public class CamelMap extends HashMap<String,Object>{
 
+
+public class CamelMap extends HashMap<String, Object>{
 
 	/**
 	 * 
@@ -16,4 +17,5 @@ public class CamelMap extends HashMap<String,Object>{
 	public Object put(String key, Object value) {
 		return super.put(JdbcUtils.convertUnderscoreNameToPropertyName(key), value);
 	}
+	
 }

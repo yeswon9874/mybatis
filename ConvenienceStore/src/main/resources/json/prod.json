@@ -1,0 +1,23 @@
+[
+	{
+		"name": "snack",
+		"code": "A1",
+		"kinds": "food",
+		"price": 1000
+	},{
+		"name": "pencil",
+		"code": "B1",
+		"kinds": "goods",
+		"price": 1200
+	},{
+		"name": "cock",
+		"code": "C1",
+		"kinds": "beverage",
+		"price": 1500
+	},{
+		"name": "chicken",
+		"code": "D2",
+		"kinds": "food",
+		"price": 5000
+	}
+]

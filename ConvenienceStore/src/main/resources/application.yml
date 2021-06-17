@@ -1,11 +1,8 @@
-
-
-
 # --------------------------------
 # BASE of worker
 
 server:
-  port: 8081
+  port: 8080
   servlet:
     context-path: /v0.1
     encoding:
@@ -35,7 +32,7 @@ spring:
       web-allow-others: true
   datasource:
     #url: jdbc:h2:tcp://localhost:9092/monsterdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:mem:storedb
     driverClassName: org.h2.Driver
     username: sa
     password:
@@ -120,9 +117,8 @@ logging:
 
 proj-env:
   param:
-    base-path: /Users/limyewon/_YESWON/STS/GIT/mybatis/CustProd-01/src/main/resources/json
+    base-path: /Users/limyewon/_YESWON/STS/workspace/ConvenienceStore/src/main/resources/json
     cust-file: cust.json
     prod-file: prod.json
     cust-prod-file: cust_prod.json
     
-
