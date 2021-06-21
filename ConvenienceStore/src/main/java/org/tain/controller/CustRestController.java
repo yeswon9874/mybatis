@@ -49,6 +49,7 @@ public class CustRestController {
 	public String updateOne(@PathVariable("id") Long id) {
 		Map<String,Object> mapIn = new HashMap<>();
 		mapIn.put("id", id);
+		mapIn.put("code", "P001");
 		mapIn.put("name", "hey");
 		this.custMapper.updateOne(mapIn);
 		System.out.println("UPDATE");

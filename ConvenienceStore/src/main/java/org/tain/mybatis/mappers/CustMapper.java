@@ -20,7 +20,7 @@ public interface CustMapper {
 			+ "(#{id}, #{name}, #{code}, #{phoneNumber}, #{gender}, #{address})")
 	int createOne(Map<String,Object> mapIn);
 	
-	@Update("update tb_cust set name= #{name} where id = #{id}")
+	@Update("update tb_cust set name= #{name}, code = #{code} where id = #{id}")
 	int updateOne(Map<String,Object> mapIn);
 
 	@Delete("delete from tb_cust where id = #{id}")

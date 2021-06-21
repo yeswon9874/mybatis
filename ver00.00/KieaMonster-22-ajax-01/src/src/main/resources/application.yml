@@ -1,8 +1,10 @@
+
+
 # --------------------------------
 # BASE of worker
 
 server:
-  port: 8082
+  port: 8080
   servlet:
     context-path: /v0.1
     encoding:
@@ -12,7 +14,6 @@ server:
       force-request: true
       force-response: true
       # mapping: 
-
 
 
 spring:
@@ -31,15 +32,11 @@ spring:
       trace: false
       web-allow-others: true
   datasource:
-    #url: jdbc:h2:tcp://localhost:9092/monsterdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    url: jdbc:h2:mem:storedb
+    url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
     username: sa
     password:
-    generate-unique-name: false
-    
 #    hikari:
-#      maximum-pool-size: 10
 #      jdbc-url: jdbc:h2:tcp://localhost:9092/lightnetdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
 #      # jdbc-url: jdbc:h2:tcp://localhost:9092/lightnetdb;MODE=Oracle;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
 #      # jdbc-url: jdbc:h2:mem:testdb
@@ -72,8 +69,6 @@ spring:
   devtools:
     livereload.enabled: true
   mandatory-file-encoding: utf-8
-
-
 
 
 # %Logger{length} : Logger name을 축약할 수 있다. {length}는 최대 자리 수, ex)logger{35}
@@ -115,10 +110,3 @@ logging:
     
     #org.tain.utils.TransferStrAndJson: trace
 
-proj-env:
-  param:
-    base-path: /Users/limyewon/_YESWON/STS/GIT/mybatis/ConvenienceStore/src/main/resources/json
-    cust-file: cust.json
-    prod-file: prod.json
-    cust-prod-file: cust_prod.json
-    

@@ -61,7 +61,7 @@ public class LoadingWorking {
 	private TbCustProdRepository tbCustProdRepository;
 	
 	public void loadCustProd() throws Exception {
-		String fileName = this.projEnvParam.getBasePath() + File.separator + this.projEnvParam.getCustProdFile();
+		String fileName = this.projEnvParam.getBasePath() + File.separator + this.projEnvParam.getCustprodFile();
 		List<TbCustProd> lst = new ObjectMapper().readValue(new File(fileName), new TypeReference <List<TbCustProd>>() {});
 		lst.forEach(item -> {
 			item.setId(this.id);

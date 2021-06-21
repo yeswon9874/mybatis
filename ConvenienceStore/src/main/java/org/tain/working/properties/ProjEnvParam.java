@@ -13,6 +13,6 @@ public class ProjEnvParam {
 	private String basePath;
 	private String custFile;
 	private String prodFile;
-	private String custProdFile;
+	private String custprodFile;
 	
 }
