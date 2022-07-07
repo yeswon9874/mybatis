@@ -19,7 +19,7 @@ public class ServiceImpl implements BoardService {
     }
 
     @Override
-    public List<BoardDto> selectBoardList(BoardDto board) throws Exception {
+    public BoardDto selectBoardList(BoardDto board) throws Exception {
         return testMapper.selectBoardList(board);
     }
 

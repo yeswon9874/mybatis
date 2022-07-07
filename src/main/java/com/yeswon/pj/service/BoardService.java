@@ -6,7 +6,7 @@ import java.util.List;
 public interface BoardService {
    public List<BoardDto> selectBoardList() throws Exception;
 
-   public List<BoardDto> selectBoardList(BoardDto board) throws Exception;
+   public BoardDto selectBoardList(BoardDto board) throws Exception;
    public void insertBoard(BoardDto board) throws Exception;
 
    public void updateMember(BoardDto board);

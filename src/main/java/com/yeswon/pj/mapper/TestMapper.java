@@ -24,7 +24,7 @@ public interface TestMapper {
 
         List<BoardDto> selectBoardList() throws Exception;
 
-        List<BoardDto> selectBoardList(BoardDto board) throws Exception;
+        BoardDto selectBoardList(BoardDto board) throws Exception;
 
         void insertBoard(BoardDto board) throws Exception;
 
