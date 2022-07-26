@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>board</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../../css/style.css"></link>
+</head>
+<body>
+Result <br>
+<span th:text="${response}"></span>
+<div class="container">
+    <h2>회원 등록</h2>
+    <form id="frm" name="frm" method="post" action="/board/updateBoard.do">
+        <table class="board_detail">
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" id="mbId" name="mbId"></td>
+            </tr>
+            <tr>
+                <td>비번</td>
+                <td><input type="text" id="mbPw" name="mbPw"></td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td><input type="text" id="address" name="address"></td>
+            </tr>
+            <tr>
+                <td>전화번호</td>
+                <td><input type="text" id="mbTell" name="mbTell"></td>
+            </tr>
+        </table>
+        <input type="submit" id="submit" value="완료" class="btn">
+    </form>
+</div>
+</body>
+</html>
